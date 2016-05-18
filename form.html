@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Form</title>
+		<link href='http://fonts.googleapis.com/css?family=Lato&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<style>
+			body{
+				background-color: #eee;
+				margin: 80px;
+				font-family: 'Lato';
+				font-size: 18px;
+			}
+			
+			.container{
+				width: 740px;
+				position: absolute;
+				top: 60px;
+				/* bottom: 60px; */
+				left: 50%;
+				margin-left: -430px;
+				background-color: white;
+				padding: 60px;
+				box-shadow: 0 0 60px 0 #ddd;
+			}
+			
+			article{
+				overflow: scroll;
+				max-height: 100%;
+			}
+			
+			label{
+				display: block;
+				width: 33%;
+				min-height: 120px;
+				float: left;
+				padding: 10px;
+				box-sizing: border-box;
+			}
+			
+			select, input[type="checkbox"]{
+				height: 40px;
+			}
+			
+			select{
+				border: 1px solid #CCC;
+			}
+			
+			input, select{
+				font-size: 16px;
+				padding: 6px;
+				margin: 12px 0 4px 0;
+				display: block;
+				width: 100%;
+				box-sizing: border-box;
+			}
+			
+			button{
+				display: block;
+				font-size: 42px;
+				padding: 20px 30px;
+				margin: 30px auto;
+			}
+			
+			.clearfix{
+				clear: both;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<article>
+			<form method="post" action="index.html">
+				
+				<label for="name">First Name: 
+					<input type="text" name="fname" placeholder="Nigel" />
+				</label>
+				
+				<label for="name">Last Name: 
+					<input type="text" name="lname" placeholder="Thornberry" />
+				</label>
+				
+				<label for="name">Email: 
+					<input type="email" name="email" placeholder="nigel@aol.com" />
+				</label>
+
+				<label for="time">Check In Time: 
+					<input type="time" name="checkintime"/>
+				</label>
+				
+				<label for="passport">Your Passport Scan 
+					 <input type="file" name="passport" accept="image/*">
+				</label>
+				
+				<label for="breakfast">Breakfast<br />
+				  <input type="checkbox" name="breakfast" id="breakfast" value="">
+				</label>
+				
+				<div class="clearfix"></div>
+				
+				<button type="submit">Send!</button>
+			</form>
+		</article>	
+	</body>
+</html>
